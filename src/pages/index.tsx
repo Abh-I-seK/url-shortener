@@ -75,7 +75,6 @@ export default function Home() {
 
   async function Click(){
     setLoader(true);
-    console.log(url);
       if(url.length==0 || url=="" || !isValidUrl(url)){
         setLoader(false);
         setWrong(true);
