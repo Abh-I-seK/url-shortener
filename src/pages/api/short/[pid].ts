@@ -10,12 +10,10 @@ export default async function handler(
     console.log("hmm");
     const {pid}=req.query;
 
-    //const exist = await Url.find({nos:pid});
+    const exist = await Url.find({nos:pid});
+    const h=exist[0].url;
+    res.json(exist+"  "+h);
     
-    res.json(pid);
-    // const h=exist[0].url;
-    // console.log("hmm");
-    // console.log(h);
     // res.json({main:h});
     // res.redirect(h);
     
