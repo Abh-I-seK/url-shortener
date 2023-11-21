@@ -9,8 +9,7 @@ export default async function handler(
     //await connectMongoose(process.env.DB_LINK);
     console.log("hmm");
     const {pid}=req.query;
-    console.log(pid);
-    res.json("hi");
+    res.json("hi"+"  "+pid);
     // const exist = await Url.find({nos:pid})
     // const h=exist[0].url;
     // console.log("hmm");
