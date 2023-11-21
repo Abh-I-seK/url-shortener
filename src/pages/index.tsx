@@ -9,7 +9,7 @@ export default function Home() {
   const[right,setRight]=useState(false);
   const[loader,setLoader]=useState(false);
 
-  const isValidUrl = urlString => {
+  const isValidUrl = (urlString:any) => {
     var urlPattern = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // validate domain name
     '((\\d{1,3}\\.){3}\\d{1,3}))'+ // validate OR ip (v4) address

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 let c=false;
-export async function connectMongoose(a :string){
+export async function connectMongoose(a :any){
     if(!c){
         await mongoose.connect(a);
     }
