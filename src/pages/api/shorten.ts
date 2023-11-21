@@ -23,7 +23,7 @@ let i=1;
     if(u){
         res.json({msg:u.shortUrl})
     }else{
-        const shortUrl="http://localhost:3000/api/short/"+ (i);
+        const shortUrl="https://url-shortener-ochre-tau.vercel.app/"+ (i);
         const uNew=new Url({url,shortUrl,nos:i});
         await uNew.save();
         i++;
