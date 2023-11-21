@@ -6,12 +6,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-    //await connectMongoose(process.env.DB_LINK);
+    await connectMongoose(process.env.DB_LINK);
     console.log("hmm");
     const {pid}=req.query;
+
+    //const exist = await Url.find({nos:pid});
     
-    res.json("hi"+"  "+pid);
-    // const exist = await Url.find({nos:pid})
+    res.json(pid);
     // const h=exist[0].url;
     // console.log("hmm");
     // console.log(h);
