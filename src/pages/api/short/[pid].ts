@@ -11,6 +11,8 @@ export default async function handler(
     
     const exist = await Url.find({nos:pid})
     const h=exist[0].url;
-    res.redirect(h);
+    console.log(h);
     res.json({main:h});
+    res.redirect(h);
+    
 }
