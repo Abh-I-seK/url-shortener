@@ -81,7 +81,7 @@ export default function Home() {
         setWrong(true);
         return;
       }
-      const data=await axios.post("https://url-shortener-ochre-tau.vercel.app/",{
+      const data=await axios.post("https://url-shortener-ochre-tau.vercel.app/api/shorten",{
         url:url
       });
       const nos=data.data.msg;
