@@ -12,8 +12,7 @@ export default async function handler(
 
     const exist = await Url.find({nos:pid});
     const h=exist[0].url;
-    window.location.href=h;
-    res.json(exist+"  "+h);
+    res.status(301).redirect(h);
     
     // res.json({main:h});
     // 
