@@ -7,14 +7,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
     await connectMongoose(process.env.DB_LINK);
-    console.log("hmm");
     const {pid}=req.query;
 
     const exist = await Url.find({nos:pid});
     const h=exist[0].url;
     res.status(301).redirect(h);
-    
-    // res.json({main:h});
-    // 
-    
 }
